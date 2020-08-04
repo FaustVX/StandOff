@@ -1,0 +1,12 @@
+{
+    "current": {"stopped": 1},
+    "next": {
+        "current": {"players_joined": 1},
+        "next": {
+            "current": {"placed_pawn": 1},
+            "next": {
+
+            }
+        }
+    }
+}
