@@ -14,6 +14,6 @@ scoreboard objectives add JoinStandOff trigger
 scoreboard objectives add NextStep trigger
 scoreboard players enable @a JoinStandOff
 
-data modify storage stand_off:storage steps set value {"current":{"stopped":1},"next":{"current":{"players_joined":1},"next":{"current":{"placed_pawn":1},"next":{}}}}
+data modify storage stand_off:storage steps set value {"current":{"stopped":1},"next":{"current":{"players_joined":1},"next":{"current":{"placed_pawn":1,"is_player1":1},"next":{}}}}
 
 say Welcome to 'Stand Off'
