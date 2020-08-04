@@ -11,7 +11,12 @@
                 "placed_pawn": 1,
                 "is_player1": 1
             },
-            "next": {}
+            "next": {
+                "current": {
+                    "ended": 1
+                },
+                "next": {}
+            }
         }
     }
 }
