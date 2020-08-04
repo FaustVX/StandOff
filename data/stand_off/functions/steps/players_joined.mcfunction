@@ -9,6 +9,7 @@ execute unless score @e[tag=player1, tag=standoff, limit=1] PlacedPawn = @e[tag=
 execute if entity @a[tag=standoff, limit=1, scores={NextStep=1..}] run give @a[tag=standoff] minecraft:fishing_rod{tag:["standoff"], Enchantments:[{lvl:10,id:"minecraft:unbreaking"}]}
 execute if entity @a[tag=standoff, limit=1, scores={NextStep=1..}] run give @a[tag=standoff] minecraft:diamond_sword{tag:["standoff"], Enchantments:[{lvl:1,id:"minecraft:knockback"},{lvl:10,id:"minecraft:unbreaking"}], display:{Name:'{"text":"Short"}'}}
 execute if entity @a[tag=standoff, limit=1, scores={NextStep=1..}] run give @a[tag=standoff] minecraft:diamond_sword{tag:["standoff"], Enchantments:[{lvl:2,id:"minecraft:knockback"},{lvl:10,id:"minecraft:unbreaking"}], display:{Name:'{"text":"Long"}'}}
+execute if entity @a[tag=standoff, limit=1, scores={NextStep=1..}] run give @a[tag=standoff] minecraft:golden_carrot{tag:["standoff"]} 64
 execute if entity @a[tag=standoff, limit=1, scores={NextStep=1..}] run function stand_off:next_step
 scoreboard players reset * NextStep
 execute if score @e[tag=player1, tag=standoff, limit=1] PlacedPawn = @e[tag=player2, tag=standoff, limit=1] PlacedPawn run scoreboard players enable @a[tag=standoff] NextStep
