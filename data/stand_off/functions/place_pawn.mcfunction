@@ -1,4 +1,4 @@
-execute as @s[tag=!place_pawn, tag=!placed_pawn] at @s if block ~ ~ ~ #stand_off:placaple unless entity @e[type=minecraft:armor_stand, distance=..1] run tag @s add place_pawn
+execute as @s[tag=!place_pawn, tag=!placed_pawn] at @s if block ~ ~ ~ #stand_off:placable unless entity @e[type=minecraft:armor_stand, distance=..1] run tag @s add place_pawn
 execute at @s[tag=place_pawn, tag=!placed_pawn] align xyz run summon minecraft:armor_stand ~.5 ~.0625 ~.5 {Tags:["not_set"], ShowArms:1b, NoBasePlate:1b, DisabledSlots:2097151, Invulnerable:1b}
 execute as @s[tag=place_pawn, tag=!placed_pawn, tag=player1] run tag @e[type=minecraft:armor_stand, tag=not_set] add player1
 execute as @s[tag=place_pawn, tag=!placed_pawn, tag=player2] run tag @e[type=minecraft:armor_stand, tag=not_set] add player2
