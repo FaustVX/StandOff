@@ -1,0 +1,2 @@
+# Query: "?function(?:" *:)? *"?(\\w+:){0}[^:]+?"?$
+# Flags: RegExp
