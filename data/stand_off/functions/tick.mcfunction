@@ -6,5 +6,4 @@ execute if score $current standoff_state = $init_placing standoff_state run func
 execute if score $current standoff_state >= $init_placing standoff_state run function stand_off:glowing
 execute if score $current standoff_state = $place_pawn standoff_state as @p[tag=standoff, tag=player1, scores={PlacePawn=-1}] run scoreboard players operation $current standoff_state = $init_turn standoff_state
 execute if score $current standoff_state = $place_pawn standoff_state as @p[tag=standoff, tag=!other, scores={PlacePawn=1..}] at @s run function stand_off:steps/place_pawn
-execute if score $current standoff_state >= $init_turn standoff_state run function stand_off:rotate_armor_stand
 execute if score $current standoff_state = $init_turn standoff_state
