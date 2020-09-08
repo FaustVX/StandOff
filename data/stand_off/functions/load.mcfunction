@@ -5,8 +5,12 @@
 #define entity $init_placing
 #define entity $place_pawn
 #define entity $init_turn
+#define entity $turn_player1
+#define entity $turn_player2
 
 clear @a[tag=standoff] minecraft:written_book{Tags:["standoff"]}
+clear @a[tag=standoff] minecraft:diamond_sword{Tags:["standoff"]}
+clear @a[tag=standoff] minecraft:netherite_sword{Tags:["standoff"]}
 clear @a[tag=standoff] minecraft:golden_carrot{Tags:["standoff"]}
 
 kill @e[type=!minecraft:player, tag=standoff]
@@ -34,6 +38,8 @@ scoreboard players set $waiting_player2 standoff_state 2
 scoreboard players set $init_placing standoff_state 3
 scoreboard players set $place_pawn standoff_state 4
 scoreboard players set $init_turn standoff_state 5
+scoreboard players set $turn_player1 standoff_state 6
+scoreboard players set $turn_player2 standoff_state 7
 scoreboard players set $current standoff_state 1
 
 say Welcome to 'Stand Off'
