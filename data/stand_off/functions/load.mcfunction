@@ -17,6 +17,8 @@ clear @a[tag=standoff] minecraft:fishing_rod{Tags:["standoff"]}
 
 kill @e[type=!minecraft:player, tag=standoff]
 effect clear @a[tag=standoff] minecraft:glowing
+effect clear @a[tag=standoff] minecraft:jump_boost
+effect clear @a[tag=standoff] minecraft:speed
 
 tag @a[tag=standoff] remove player1
 tag @a[tag=standoff] remove player2

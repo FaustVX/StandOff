@@ -7,5 +7,7 @@ scoreboard objectives setdisplay sidebar PlacedPawn
 playsound minecraft:entity.player.levelup master @a[tag=standoff]
 execute as @p[tag=standoff, tag=player2] run function stand_off:next_player
 scoreboard players set @a[tag=standoff] PlacedPawn 0
+effect give @a[tag=standoff] minecraft:jump_boost 999999 1 true
+effect give @a[tag=standoff] minecraft:speed 999999 1 true
 
 function stand_off:next_step
