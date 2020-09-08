@@ -23,6 +23,7 @@ tag @a[tag=standoff] remove player2
 tag @a[tag=standoff] remove other
 tag @a[tag=standoff] remove standoff
 
+scoreboard objectives remove force_next_turn
 scoreboard objectives remove precision_shot
 scoreboard objectives remove standoff_health
 scoreboard objectives remove PlacedPawn
@@ -35,6 +36,7 @@ scoreboard objectives add PlacePawn trigger
 scoreboard objectives add PlacedPawn dummy
 scoreboard objectives add standoff_health dummy
 scoreboard objectives add precision_shot trigger
+scoreboard objectives add force_next_turn trigger
 
 scoreboard players enable @a join_standoff
 # scoreboard objectives setdisplay sidebar standoff_state
