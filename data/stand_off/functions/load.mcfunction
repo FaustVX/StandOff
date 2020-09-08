@@ -13,6 +13,7 @@ clear @a[tag=standoff] minecraft:written_book{Tags:["standoff"]}
 clear @a[tag=standoff] minecraft:diamond_sword{Tags:["standoff"]}
 clear @a[tag=standoff] minecraft:netherite_sword{Tags:["standoff"]}
 clear @a[tag=standoff] minecraft:golden_carrot{Tags:["standoff"]}
+clear @a[tag=standoff] minecraft:fishing_rod{Tags:["standoff"]}
 
 kill @e[type=!minecraft:player, tag=standoff]
 effect clear @a[tag=standoff] minecraft:glowing
@@ -22,6 +23,7 @@ tag @a[tag=standoff] remove player2
 tag @a[tag=standoff] remove other
 tag @a[tag=standoff] remove standoff
 
+scoreboard objectives remove precision_shot
 scoreboard objectives remove standoff_health
 scoreboard objectives remove PlacedPawn
 scoreboard objectives remove PlacePawn
@@ -32,6 +34,7 @@ scoreboard objectives add standoff_state dummy
 scoreboard objectives add PlacePawn trigger
 scoreboard objectives add PlacedPawn dummy
 scoreboard objectives add standoff_health dummy
+scoreboard objectives add precision_shot trigger
 
 scoreboard players enable @a join_standoff
 # scoreboard objectives setdisplay sidebar standoff_state
