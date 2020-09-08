@@ -1,5 +1,5 @@
 scoreboard players reset * join_standoff
-msg @a[tag=standoff] @p[tag=standoff, tag=player1] & @p[tag=standoff, tag=player2] joined the game
+tellraw @a[tag=standoff] ["", {"selector": "@p[tag=standoff, tag=player1]", "color": "aqua"}, {"text": " & "}, {"selector": "@p[tag=standoff, tag=player2]", "color": "aqua"}, {"text": " joined the game"}]
 give @a[tag=standoff] golden_carrot{Tags:["standoff"]} 64
 scoreboard players enable @p[tag=standoff, tag=player1] PlacePawn
 scoreboard objectives setdisplay sidebar PlacedPawn
