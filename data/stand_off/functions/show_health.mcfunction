@@ -1,0 +1,4 @@
+execute as @e[type=minecraft:armor_stand, tag=standoff, tag=pawn] run data modify entity @s CustomName set value "[{\"text\":\"Pawn \"}, {\"text\":\"♥\", \"color\":\"red\"}]"
+execute as @e[type=minecraft:armor_stand, tag=standoff, tag=king, nbt={Health:3f}] run data modify entity @s CustomName set value "[{\"text\":\"King \", \"color\": \"gold\"}, {\"text\":\"♥♥♥\", \"color\":\"red\"}]"
+execute as @e[type=minecraft:armor_stand, tag=standoff, tag=king, nbt={Health:2f}] run data modify entity @s CustomName set value "[{\"text\":\"King \", \"color\": \"gold\"}, {\"text\":\"♥♥\", \"color\":\"red\"}]"
+execute as @e[type=minecraft:armor_stand, tag=standoff, tag=king, nbt={Health:1f}] run data modify entity @s CustomName set value "[{\"text\":\"King \", \"color\": \"gold\"}, {\"text\":\"♥\", \"color\":\"red\"}]"

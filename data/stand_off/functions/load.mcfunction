@@ -16,7 +16,6 @@ clear @a[tag=standoff] minecraft:golden_carrot{Tags:["standoff"]}
 clear @a[tag=standoff] minecraft:fishing_rod{Tags:["standoff"]}
 
 kill @e[type=!minecraft:player, tag=standoff]
-effect clear @a[tag=standoff] minecraft:glowing
 effect clear @a[tag=standoff] minecraft:jump_boost
 effect clear @a[tag=standoff] minecraft:speed
 
