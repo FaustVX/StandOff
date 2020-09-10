@@ -1,4 +1,4 @@
-summon minecraft:armor_stand ~ ~ ~ {NoBasePlate:true, NoAI:true, ShowArms:true, Tags:["standoff"], Invulnerable:true, DisabledSlots:2039583, Pose:{RightArm:[280f, 0f, 0f]}}
+summon minecraft:armor_stand ~ ~ ~ {NoBasePlate:true, NoAI:true, ShowArms:true, Tags:["standoff"], Marker:true, DisabledSlots:2039583, Pose:{RightArm:[280f, 0f, 0f]}}
 execute if score @s PlacePawn matches 1 as @e[type=minecraft:armor_stand, sort=nearest, limit=1, tag=standoff] run function stand_off:pawns/pawn
 execute if score @s PlacePawn matches 2 as @e[type=minecraft:armor_stand, sort=nearest, limit=1, tag=standoff] run function stand_off:pawns/king
 function stand_off:pawns/set_player
