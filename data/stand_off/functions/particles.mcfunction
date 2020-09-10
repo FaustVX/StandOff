@@ -3,4 +3,4 @@ execute as @p[tag=standoff, tag=!other] if entity @s[tag=player2] at @e[type=min
 
 execute at @e[type=minecraft:armor_stand, tag=standoff, tag=flying] anchored feet run particle minecraft:end_rod ~ ~ ~
 
-execute if score $current standoff_state = $place_pawn standoff_state at @p[tag=standoff, tag=!other] unless entity @e[type=minecraft:armor_stand, distance=..1, tag=standoff] align xyz if block ~ ~ ~ #stand_off:placable run particle minecraft:warped_spore ~.5 ~ ~.5 .125 .125 .125 0 7
+execute at @p[tag=standoff, tag=show_placable] unless entity @e[type=minecraft:armor_stand, distance=..1, tag=standoff] align xyz if block ~ ~ ~ #stand_off:placable run particle minecraft:warped_spore ~.5 ~ ~.5 .125 .125 .125 0 7

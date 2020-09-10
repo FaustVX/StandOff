@@ -1,5 +1,7 @@
 tag @p[tag=standoff, tag=other] remove other
 tag @s add other
+tag @p[tag=standoff, tag=show_placable] remove show_placable
+tag @p[tag=standoff, tag=!other] add show_placable
 
 clear @a[tag=standoff] minecraft:written_book{Tags:["standoff"]}
 playsound minecraft:entity.experience_orb.pickup master @p[tag=standoff, tag=!other]
