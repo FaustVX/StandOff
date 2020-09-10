@@ -4,6 +4,8 @@ My implementation of Stand Off minigame (created by Xisuma on Hermitcraft) in a 
 Compatible with minecraft **1.16**
 
 1. Start by placing some carpet (red where you'll place armor stand later)
+2. Both players type `/trigger join_standoff` to join the game
+3. Enjoy
 
 
 [My others datapacks](https://gist.github.com/FaustVX/1be02fac5f7d9c586b479d112b65f067)
