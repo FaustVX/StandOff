@@ -1,7 +1,7 @@
 execute if score $current standoff_state = $stopped standoff_state run function stand_off:load
 execute if score $current standoff_state >= $waiting_player1 standoff_state if score $current standoff_state <= $waiting_player2 standoff_state run scoreboard players enable @a[tag=!standoff] join_standoff
-execute if score $current standoff_state = $waiting_player1 standoff_state if entity @a[scores={join_standoff=1..}] run function stand_off:steps/wait_player1
-execute if score $current standoff_state = $waiting_player2 standoff_state if entity @a[scores={join_standoff=1..}] run function stand_off:steps/wait_player2
+execute if score $current standoff_state = $waiting_player1 standoff_state as @r[scores={join_standoff=1..}] run function stand_off:steps/wait_player
+execute if score $current standoff_state = $waiting_player2 standoff_state as @r[scores={join_standoff=1..}] run function stand_off:steps/wait_player
 execute if score $current standoff_state = $init_placing standoff_state run function stand_off:steps/init_placing
 execute if score $current standoff_state >= $place_pawn standoff_state run function stand_off:show_health
 execute if score $current standoff_state >= $init_placing standoff_state run function stand_off:particles
