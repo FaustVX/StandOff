@@ -19,3 +19,8 @@ execute if score @s switch_place matches 2 run tag @e[type=fishing_bobber, dista
 execute if score @s switch_place matches 1..2 run tag @a[tag=standoff] remove show_placable
 execute if score @s switch_place matches 2 if entity @e[type=minecraft:fishing_bobber, tag=standoff, tag=switch_place] run tag @s add show_placable
 execute if score @s switch_place matches 2 if predicate stand_off:is_sneaking if entity @e[type=minecraft:armor_stand, tag=standoff, distance=..1] at @e[type=minecraft:fishing_bobber, tag=standoff, tag=switch_place] as @e[type=minecraft:armor_stand, tag=standoff, dx=0.1, dy=0.1, dz=0.1, sort=nearest, limit=1] at @s run function stand_off:bonus/switch_place
+
+execute if score @s double_move matches 1 run tellraw @a[tag=standoff] ["", {"selector": "@s", "color": "aqua"}, {"text": " uses "}, {"text": "[Double Move]", "color": "dark_green"}]
+execute if score @s double_move matches 1 run scoreboard players add @s double_move 1
+execute if score @s double_move matches 3 as @p[tag=standoff, tag=other] run function stand_off:next_turn
+execute if score @s double_move matches 3 run scoreboard players add @s double_move 1
