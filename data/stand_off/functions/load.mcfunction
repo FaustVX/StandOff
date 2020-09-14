@@ -24,6 +24,7 @@ tag @a[tag=standoff] remove other
 tag @a[tag=standoff] remove show_placable
 tag @a[tag=standoff] remove standoff
 
+scoreboard objectives remove attack_damage
 scoreboard objectives remove force_next_turn
 scoreboard objectives remove double_move
 scoreboard objectives remove switch_place
@@ -44,6 +45,7 @@ scoreboard objectives add retreat trigger
 scoreboard objectives add switch_place trigger
 scoreboard objectives add double_move trigger
 scoreboard objectives add force_next_turn trigger
+scoreboard objectives add attack_damage dummy
 
 scoreboard players enable @a join_standoff
 # scoreboard objectives setdisplay sidebar standoff_state
