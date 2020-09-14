@@ -18,14 +18,15 @@ _Other stuff_
     ![arena3](Others%20Files/img/arena3.png)
 
 - It comes with 4 differents bonuses :
+    - All bonuses must be activated before hitting a pawn
     1. `Precision Shot` : you can pull one of your pawn with a fishing rod
-    2. `Retreat` : You can replace one of your pawn in a spawn spot
-    3. `Switch Place` : You can switch the place of one your pawn with any other pawn
+    2. `Retreat` : You can replace one of your pawn in a spawn spot (you must play after activating this bonus)
+    3. `Switch Place` : You can switch the place of one of your pawn with any other pawn (you must play after activating this bonus)
     4. `Double Move` : You can play twice in the same turn (the same pawn or a different one)
 
 - It contains 2 differents types of pawn :
-    1. `Pawn` : which have 1 heart
-    2. `King` : which have 3 hearts
+    1. `Pawn` : which have 1 attack point & 1 heart
+    2. `King` : which have 2 attack points & 3 hearts
 
 - When you place your pawns, you have to have the same or greater points than the other player
 - When player1 equalize with player2, he could set the next step
