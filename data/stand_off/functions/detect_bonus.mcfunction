@@ -4,16 +4,16 @@ execute if score @s precision_shot matches 1 run scoreboard players add @s preci
 
 execute if score @s retreat matches 1 run tellraw @a[tag=standoff] ["", {"selector": "@s", "color": "aqua"}, {"text": " uses "}, {"text": "[Retreat]", "color": "dark_green"}]
 execute if score @s retreat matches 1 run scoreboard players add @s retreat 1
-execute if score @s retreat matches 2 run tag @e[type=minecraft:armor_stand, tag=standoff] remove selected
-execute if score @s retreat matches 2 if entity @s[tag=standoff, tag=player1] run tag @e[type=minecraft:armor_stand, tag=standoff, tag=player1, sort=nearest, limit=1] add selected
-execute if score @s retreat matches 2 if entity @s[tag=standoff, tag=player2] run tag @e[type=minecraft:armor_stand, tag=standoff, tag=player2, sort=nearest, limit=1] add selected
-execute if score @s retreat matches 2 if entity @e[type=minecraft:armor_stand, tag=standoff, tag=selected] run scoreboard players add @s[predicate=stand_off:is_sneaking] retreat 1
-execute if score @s retreat matches 3 if entity @e[type=minecraft:armor_stand, tag=standoff, tag=selected] run playsound minecraft:item.armor.equip_generic master @s
-execute if score @s retreat matches 3 if entity @e[type=minecraft:armor_stand, tag=standoff, tag=selected] run tellraw @s "Now go to a spawn point"
+execute if score @s retreat matches 2 run tag @e[type=minecraft:armor_stand, tag=standoff] remove selected1
+execute if score @s retreat matches 2 if entity @s[tag=standoff, tag=player1] run tag @e[type=minecraft:armor_stand, tag=standoff, tag=player1, sort=nearest, limit=1] add selected1
+execute if score @s retreat matches 2 if entity @s[tag=standoff, tag=player2] run tag @e[type=minecraft:armor_stand, tag=standoff, tag=player2, sort=nearest, limit=1] add selected1
+execute if score @s retreat matches 2 if entity @e[type=minecraft:armor_stand, tag=standoff, tag=selected1] run scoreboard players add @s[predicate=stand_off:is_sneaking] retreat 1
+execute if score @s retreat matches 3 if entity @e[type=minecraft:armor_stand, tag=standoff, tag=selected1] run playsound minecraft:item.armor.equip_generic master @s
+execute if score @s retreat matches 3 if entity @e[type=minecraft:armor_stand, tag=standoff, tag=selected1] run tellraw @s "Now go to a spawn point"
 execute if score @s retreat matches 3 run scoreboard players add @s retreat 1
 execute if score @s retreat matches 4 run tag @a[tag=standoff] remove show_placable
-execute if score @s retreat matches 4 if entity @e[type=minecraft:armor_stand, tag=standoff, tag=selected] run tag @s add show_placable
-execute if score @s retreat matches 4 if block ~ ~ ~ #stand_off:placable if predicate stand_off:is_sneaking unless entity @e[type=minecraft:armor_stand, tag=standoff, distance=..1] as @e[type=minecraft:armor_stand, tag=standoff, tag=selected] at @p[tag=standoff, tag=!other] align xz rotated as @s run function stand_off:bonus/retreat
+execute if score @s retreat matches 4 if entity @e[type=minecraft:armor_stand, tag=standoff, tag=selected1] run tag @s add show_placable
+execute if score @s retreat matches 4 if block ~ ~ ~ #stand_off:placable if predicate stand_off:is_sneaking unless entity @e[type=minecraft:armor_stand, tag=standoff, distance=..1] as @e[type=minecraft:armor_stand, tag=standoff, tag=selected1] at @p[tag=standoff, tag=!other] align xz rotated as @s run function stand_off:bonus/retreat
 
 execute if score @s switch_place matches 1 run tellraw @a[tag=standoff] ["", {"selector": "@s", "color": "aqua"}, {"text": " uses "}, {"text": "[Switch Place]", "color": "dark_green"}]
 execute if score @s switch_place matches 1 run give @s minecraft:fishing_rod{Tags:["standoff", "switch_place"], Unbreakable:true, display:{Name:'{"text":"Switch Place", "color": "dark_green"}'}}

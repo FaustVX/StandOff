@@ -5,4 +5,11 @@ execute at @e[type=minecraft:armor_stand, tag=standoff, tag=flying] anchored fee
 
 execute at @p[tag=standoff, tag=show_placable] unless entity @e[type=minecraft:armor_stand, distance=..1, tag=standoff] align xyz if block ~ ~ ~ #stand_off:placable run particle minecraft:warped_spore ~.5 ~ ~.5 .125 .125 .125 0 7
 
-execute at @e[type=minecraft:armor_stand, tag=standoff, tag=selected] run particle minecraft:composter ~ ~1 ~ .1 .3 .1 0 1
+execute at @e[tag=standoff, tag=selected0] run particle minecraft:dust .15 .15 .15 1 ~ ~1 ~ .1 .3 .1 0 1
+execute at @e[tag=standoff, tag=selected1] run particle minecraft:dust .15 .15 .85 1 ~ ~1 ~ .1 .3 .1 0 1
+execute at @e[tag=standoff, tag=selected2] run particle minecraft:dust .15 .85 .15 1 ~ ~1 ~ .1 .3 .1 0 1
+execute at @e[tag=standoff, tag=selected3] run particle minecraft:dust .15 .85 .85 1 ~ ~1 ~ .1 .3 .1 0 1
+execute at @e[tag=standoff, tag=selected4] run particle minecraft:dust .85 .15 .15 1 ~ ~1 ~ .1 .3 .1 0 1
+execute at @e[tag=standoff, tag=selected5] run particle minecraft:dust .85 .15 .85 1 ~ ~1 ~ .1 .3 .1 0 1
+execute at @e[tag=standoff, tag=selected6] run particle minecraft:dust .85 .85 .15 1 ~ ~1 ~ .1 .3 .1 0 1
+execute at @e[tag=standoff, tag=selected7] run particle minecraft:dust .85 .85 .85 1 ~ ~1 ~ .1 .3 .1 0 1
